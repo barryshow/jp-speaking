@@ -1,0 +1,71 @@
+// 四、补充报告题
+export default [
+  {
+    id: 'p1-feeling-bored',
+    section: 'extra',
+    part: 1,
+    group: 'part1',
+    tag: '补充报告',
+    titleJa: '退屈を感じるとき',
+    titleZh: 'Feeling bored',
+    titleEn: 'Feeling bored',
+    questions: [
+      { ja: 'よく退屈を感じますか。', zh: '你经常觉得无聊吗？', en: 'Do you often feel bored?' },
+      { ja: 'どんな状況だと退屈しますか。', zh: '什么样的情境会让你觉得无聊？', en: 'What kinds of situations make you bored?' },
+      { ja: '子どものころ、何を退屈に感じていましたか。', zh: '你小时候觉得什么很无聊？', en: 'What did you find boring when you were a child?' },
+      { ja: 'また興味を持てるように、どうしていますか。', zh: '你会怎么让自己重新提起兴趣？', en: 'What do you do to make yourself interested again?' },
+    ],
+  },
+  {
+    id: 'p2-difficulties-succeeded',
+    section: 'extra',
+    part: 2,
+    group: 'people',
+    tag: '补充报告',
+    titleJa: '困難を乗り越えて成功した人（類題）',
+    titleZh: '遇到困难但成功的人（相近题）',
+    titleEn: 'Describe a person who met difficulties but succeeded',
+    cue: {
+      ja: '困難に直面しながらも成功した人のことを話してください。',
+      zh: '描述一个遇到困难但最终成功的人。',
+      en: 'Describe a person who met difficulties but succeeded.',
+    },
+    bullets: [
+      { ja: 'その人はどんな人か', zh: '这个人是谁', en: 'Who this person is' },
+      { ja: 'その人とはどういう関係か', zh: '你怎么认识这个人的', en: 'How you know this person' },
+      { ja: 'その人が何をしたか、どんなところが優れているか', zh: '这个人做了什么、有什么品质', en: 'What this person did or what quality they have' },
+      { ja: 'なぜその人があなたの印象に残っているのか', zh: '并解释为什么这个人让你印象深刻', en: 'And explain why this person stands out to you' },
+    ],
+    part3: [
+      { ja: '人に尊敬されたり成功したりするには、どんな資質が必要だと思いますか。', zh: '哪些品质能让人受到尊敬并获得成功？', en: 'What qualities make a person respected or successful?' },
+      { ja: 'そうした資質は主に身につけるものですか、それとも生まれつきのものですか。', zh: '这些品质主要是后天习得的还是天生的？', en: 'Are these qualities mainly learned or natural?' },
+      { ja: '家庭や学校は、若者がよい資質を伸ばすのをどう手助けできますか。', zh: '家庭和学校可以怎样帮助年轻人培养良好品质？', en: 'How can families and schools help young people develop good qualities?' },
+    ],
+  },
+  {
+    id: 'p2-device-problem',
+    section: 'extra',
+    part: 2,
+    group: 'event',
+    tag: '补充报告',
+    titleJa: '電子機器の使用で困ったこと（類題）',
+    titleZh: '使用电子设备遇到问题（相近题）',
+    titleEn: 'Describe a time when you had a problem with using an electronic device',
+    cue: {
+      ja: '電子機器を使っていて問題が起きたときのことについて話してください。',
+      zh: '描述一次你使用电子设备时遇到问题的经历。',
+      en: 'Describe a time when you had a problem with using an electronic device.',
+    },
+    bullets: [
+      { ja: 'いつ、どこで起こったことか', zh: '事情发生在何时何地', en: 'When and where it happened' },
+      { ja: '誰が関わっていたか', zh: '涉及哪些人', en: 'Who was involved' },
+      { ja: '何があったか', zh: '发生了什么', en: 'What happened' },
+      { ja: 'その経験についてどう感じたか', zh: '并说明你对这段经历的感受', en: 'And explain how you felt about the experience' },
+    ],
+    part3: [
+      { ja: '新しいテクノロジーの主な利点とリスクは何ですか。', zh: '新科技的主要好处和风险是什么？', en: 'What are the main benefits and risks of new technology?' },
+      { ja: '若者はデジタル機器に依存しすぎていると思いますか。', zh: '年轻人是不是过度依赖电子设备了？', en: 'Are young people becoming too dependent on digital devices?' },
+      { ja: '学校はテクノロジーを責任を持って使うことをどう教えるべきでしょうか。', zh: '学校应该教学生如何负责任地使用科技？', en: 'What should schools teach students about using technology responsibly?' },
+    ],
+  },
+]

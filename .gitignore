@@ -1,0 +1,21 @@
+# 依赖与构建产物
+node_modules/
+dist/
+.preview/
+.vite/
+
+# 日志
+*.log
+npm-debug.log*
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# 本地环境变量（勿提交 token / 密钥）
+.env
+.env.*
+!.env.example

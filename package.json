@@ -1,0 +1,20 @@
+{
+  "name": "jlpt-speaking",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "日本語スピーキング練習帳 — IELTS/雅思口语题库的日语版刷题站",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
