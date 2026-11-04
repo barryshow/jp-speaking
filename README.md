@@ -94,7 +94,7 @@ DNS 生效后 GitHub 会自动签发 Let's Encrypt 证书，通常几分钟内�
 把 `public/CNAME` 删掉并按子路径构建即可：
 
 ```bash
-BASE_PATH=/jlpt-speaking/ npm run build
+BASE_PATH=/jp-speaking/ npm run build
 ```
 
 ## 许可
