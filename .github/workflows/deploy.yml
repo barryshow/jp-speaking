@@ -32,7 +32,7 @@ jobs:
         run: node scripts/check-data.mjs
 
       - name: Build
-        # 站点走自定义域名（CNAME = jlpt.barryshow.net），资源挂在根路径 '/'
+        # 站点走自定义域名（CNAME = jpspeaking.barryshow.net），资源挂在根路径 '/'
         run: npm run build
         env:
           BASE_PATH: /

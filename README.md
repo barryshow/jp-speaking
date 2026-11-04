@@ -70,22 +70,22 @@ node scripts/check-data.mjs   # 题库数据自检
 
 ## 部署与自定义域名
 
-正式地址：**<https://jlpt.barryshow.net/>**
+正式地址：**<https://jpspeaking.barryshow.net/>**
 
 推送到 `main` 分支后，`.github/workflows/deploy.yml` 会自动跑数据校验 → 构建 → 发布到
 GitHub Pages。构建以根路径（`BASE_PATH=/`）产出，仓库根的 `public/CNAME` 声明自定义域名
-`jlpt.barryshow.net`，Vite 构建时会自动把它复制到 `dist/`。
+`jpspeaking.barryshow.net`，Vite 构建时会自动把它复制到 `dist/`。
 
 GitHub Pages 侧需要（仓库 **Settings → Pages**）：
 
 - Source 选择 **GitHub Actions**；
-- Custom domain 填 `jlpt.barryshow.net`，DNS 生效后勾选 **Enforce HTTPS**。
+- Custom domain 填 `jpspeaking.barryshow.net`，DNS 生效后勾选 **Enforce HTTPS**。
 
 Cloudflare DNS 侧新增一条记录：
 
 | 类型 | 名称 | 内容 | 代理状态 |
 | --- | --- | --- | --- |
-| CNAME | `jlpt` | `barryshow.github.io` | **DNS only**（灰云） |
+| CNAME | `jpspeaking` | `barryshow.github.io` | **DNS only**（灰云） |
 
 不要开橙云：Cloudflare 代理 GitHub Pages 容易出现重定向循环，且 GitHub 签发证书需要直连回源。
 DNS 生效后 GitHub 会自动签发 Let's Encrypt 证书，通常几分钟内可用。
