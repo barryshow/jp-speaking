@@ -32,10 +32,10 @@ jobs:
         run: node scripts/check-data.mjs
 
       - name: Build
-        # base 必须等于仓库名，否则 GitHub Pages 子路径下静态资源 404
+        # 站点走自定义域名（CNAME = jlpt.barryshow.net），资源挂在根路径 '/'
         run: npm run build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          BASE_PATH: /
 
       - uses: actions/configure-pages@v5
 

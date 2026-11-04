@@ -68,17 +68,33 @@ node scripts/check-data.mjs   # 题库数据自检
 2. 如果新开一个分区，在 `src/data/index.js` 的 `SECTIONS` 里挂上；
 3. `node scripts/check-data.mjs && npm run build` 确认无误。
 
-## 部署到 GitHub Pages
+## 部署与自定义域名
 
-推送到 `main` 分支后，`.github/workflows/deploy.yml` 会自动跑数据校验 → 构建 → 发布。
+正式地址：**<https://jlpt.barryshow.net/>**
 
-首次需要在仓库 **Settings → Pages → Source** 里选择 **GitHub Actions**。
+推送到 `main` 分支后，`.github/workflows/deploy.yml` 会自动跑数据校验 → 构建 → 发布到
+GitHub Pages。构建以根路径（`BASE_PATH=/`）产出，仓库根的 `public/CNAME` 声明自定义域名
+`jlpt.barryshow.net`，Vite 构建时会自动把它复制到 `dist/`。
 
-站点地址会是 `https://<用户名>.github.io/<仓库名>/`。构建脚本会自动把 `BASE_PATH`
-设成 `/仓库名/`；仓库改名不用改配置。本地预览构建产物时若路径不对，可手动覆盖：
+GitHub Pages 侧需要（仓库 **Settings → Pages**）：
+
+- Source 选择 **GitHub Actions**；
+- Custom domain 填 `jlpt.barryshow.net`，DNS 生效后勾选 **Enforce HTTPS**。
+
+Cloudflare DNS 侧新增一条记录：
+
+| 类型 | 名称 | 内容 | 代理状态 |
+| --- | --- | --- | --- |
+| CNAME | `jlpt` | `barryshow.github.io` | **DNS only**（灰云） |
+
+不要开橙云：Cloudflare 代理 GitHub Pages 容易出现重定向循环，且 GitHub 签发证书需要直连回源。
+DNS 生效后 GitHub 会自动签发 Let's Encrypt 证书，通常几分钟内可用。
+
+如果临时想回到 GitHub Pages 的项目子路径（`https://<用户名>.github.io/<仓库名>/`），
+把 `public/CNAME` 删掉并按子路径构建即可：
 
 ```bash
-BASE_PATH=/my-repo/ npm run build && npm run preview
+BASE_PATH=/jlpt-speaking/ npm run build
 ```
 
 ## 许可
