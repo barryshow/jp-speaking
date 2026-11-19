@@ -524,6 +524,21 @@ h1 {
   flex: 1;
 }
 
+.japanese-text ruby {
+  ruby-position: over;
+}
+
+.japanese-text rt {
+  font-size: 0.60em;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.card-head .japanese-text,
+.card .q-ja {
+  line-height: 1.95;
+}
+
 .q-ja {
   margin: 0;
   font-size: 14.5px;

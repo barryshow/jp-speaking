@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import JapaneseText from './JapaneseText.jsx'
 
 export default function TopicCard({ topic: t, showZh, showEn }) {
   const [copied, setCopied] = useState(false)
@@ -18,7 +19,7 @@ export default function TopicCard({ topic: t, showZh, showEn }) {
     <article className="card" id={t.id}>
       <header className="card-head">
         <h4>
-          {t.titleJa}
+          <JapaneseText>{t.titleJa}</JapaneseText>
           <button className="anchor" onClick={copyLink} title="リンクをコピー">
             {copied ? '✓' : '#'}
           </button>
@@ -38,7 +39,7 @@ export default function TopicCard({ topic: t, showZh, showEn }) {
             <li key={i}>
               <span className="q-no">{i + 1}</span>
               <div className="q-body">
-                <p className="q-ja">{q.ja}</p>
+                <p className="q-ja"><JapaneseText>{q.ja}</JapaneseText></p>
                 {showZh && <p className="q-zh">{q.zh}</p>}
                 {showEn && <p className="q-en">{q.en}</p>}
               </div>
@@ -49,7 +50,7 @@ export default function TopicCard({ topic: t, showZh, showEn }) {
         <div className="p2">
           <div className="cue">
             <p className="cue-label">Part 2</p>
-            <p className="q-ja">{t.cue.ja}</p>
+            <p className="q-ja"><JapaneseText>{t.cue.ja}</JapaneseText></p>
             {showZh && <p className="q-zh">{t.cue.zh}</p>}
             {showEn && <p className="q-en">{t.cue.en}</p>}
             <p className="cue-hint">– You should say:</p>
@@ -58,7 +59,7 @@ export default function TopicCard({ topic: t, showZh, showEn }) {
                 <li key={i}>
                   <span className="dot" aria-hidden="true" />
                   <div className="q-body">
-                    <p className="q-ja">{b.ja}</p>
+                    <p className="q-ja"><JapaneseText>{b.ja}</JapaneseText></p>
                     {showZh && <p className="q-zh">{b.zh}</p>}
                     {showEn && <p className="q-en">{b.en}</p>}
                   </div>
@@ -73,7 +74,7 @@ export default function TopicCard({ topic: t, showZh, showEn }) {
                 <li key={i}>
                   <span className="q-no">{i + 1}</span>
                   <div className="q-body">
-                    <p className="q-ja">{q.ja}</p>
+                    <p className="q-ja"><JapaneseText>{q.ja}</JapaneseText></p>
                     {showZh && <p className="q-zh">{q.zh}</p>}
                     {showEn && <p className="q-en">{q.en}</p>}
                   </div>
